@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
         :root {
             --bg-color: #0f172a;
             --text-color: #ffffff;
-            --accent-color: #38bdf8;
+            --accent-color: #10b981; /* Emerald accent for v2 */
             --card-bg: rgba(255, 255, 255, 0.05);
             --border-color: rgba(255, 255, 255, 0.1);
         }
@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
+            background: linear-gradient(to right, #10b981, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -121,7 +121,7 @@ app.get('/', (req, res) => {
 </head>
 <body>
     <div class="container">
-        <h1>CA2 - CI/CD Pipeline App - v1</h1>
+        <h1>CA2 - CI/CD Pipeline App - v2</h1>
         <h2>Deployed via GitHub Actions + Docker + Watchtower</h2>
         <p>Server is running on AWS EC2</p>
         <div class="timestamp">
@@ -129,7 +129,7 @@ app.get('/', (req, res) => {
         </div>
         <div class="card">
             <div class="version-label">App Version</div>
-            <div class="version-number">1.0.0</div>
+            <div class="version-number">2.0.0</div>
         </div>
     </div>
 </body>
@@ -145,7 +145,7 @@ app.get('/', (req, res) => {
 app.get('/health', (req, res) => {
     res.json({
         status: "ok",
-        version: "1.0.0",
+        version: "2.0.0",
         timestamp: new Date().toISOString()
     });
 });
