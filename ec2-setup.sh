@@ -10,10 +10,10 @@ echo "Adding current user to docker group..."
 # Note: You may need to log out and back in for this to take effect, or use 'newgrp docker'
 sudo usermod -aG docker ubuntu && newgrp docker <<EONG
 echo "Pulling latest Docker image from Docker Hub..."
-docker pull <DOCKERHUB_USERNAME>/my-cicd-app:latest
+docker pull sanjogpooajry/my-cicd-app:latest
 
 echo "Running the application container on port 3000..."
-docker run -d --name my-app -p 3000:3000 --restart always <DOCKERHUB_USERNAME>/my-cicd-app:latest
+docker run -d --name my-app -p 3000:3000 --restart always sanjogpooajry/my-cicd-app:latest
 
 echo "Starting Watchtower for automatic image updates..."
 # Watchtower will check for new images every 30 seconds
